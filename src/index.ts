@@ -38,14 +38,14 @@ export default function scrub(options: Options = {}) {
         let isTag = false;
 
         for (const { begin, end } of tags) {
-          if (line.trim() === begin) {
+          if (line.trim() === `//${begin}`) {
             isTag = true;
             scrubber.isActive = true;
             scrubber.shouldReset = end === undefined;
             break;
           }
 
-          else if (line.trim() === end) {
+          else if (line.trim() === `//${end}`) {
             isTag = true;
             scrubber.isActive = false;
             scrubber.shouldReset = false;
