@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-scrub",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Remove sections of code base on custom-defined tags.",
   "main": "./dist/index.js",
   "scripts": {
