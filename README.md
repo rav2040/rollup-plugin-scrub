@@ -1,6 +1,6 @@
 # rollup-plugin-scrub
 
-Remove sections of code base on custom-defined tags.
+Remove lines or sections of code based on custom-defined tags.
 
 ## Install with NPM
 
@@ -28,6 +28,7 @@ function bar() {
 //!dev-code-end
 ```
 
+
 Then in your Rollup config file, use the scrub plugin as follows.
 
 ```js
@@ -48,11 +49,14 @@ export default {
   ]
 };
 ```
+
+
 The plugin options includes a "tags" property which should be provided with an array of tag objects.
 
 Each tag object must have a "begin" property, and may also have an optional "end" property.
 
 If only a "begin" tag is provided, only the line immediately following it will be removed. Otherwise, all lines between the start and end tags will be removed.
+
 
 The example above will result in output code like this:
 
@@ -63,5 +67,6 @@ function foo() {
   // Some code required in production build
 }
 ```
+
 
 Each tag should be on its own line (it doesn't matter if there's trailing white space). You can name them whatever you like, but they should only be included as `//` comments.
