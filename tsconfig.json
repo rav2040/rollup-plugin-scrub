@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "declaration": true,
+    "sourceMap": true,
+  }
+}
