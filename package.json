@@ -1,11 +1,11 @@
 {
   "name": "rollup-plugin-scrub",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "Remove lines or sections of code based on custom-defined tags.",
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.esm.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rm -r ./dist && rollup -c"
   },
   "repository": {
     "type": "git",
