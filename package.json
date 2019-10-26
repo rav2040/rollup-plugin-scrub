@@ -5,9 +5,9 @@
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "scripts": {
-    "build": "rm -rf ./dist && rollup -c && npm run test",
+    "build": "rm -rf ./dist && rollup -c",
     "pretest": "rm -f ./test/output.*.test.js && rollup -c ./test/rollup.config.cjs.test.js && rollup -c ./test/rollup.config.esm.test.js",
-    "test": "npm run pretest && npx ava"
+    "test": "npm run build && npm run pretest && npx ava"
   },
   "repository": {
     "type": "git",
