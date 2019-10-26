@@ -1,5 +1,7 @@
 # rollup-plugin-scrub
 
+[![Build Status](https://travis-ci.com/rav2040/rollup-plugin-scrub.svg?branch=master)](https://travis-ci.com/rav2040/rollup-plugin-scrub)
+
 Remove lines or sections of code based on custom-defined tags.
 
 ## Install with NPM
