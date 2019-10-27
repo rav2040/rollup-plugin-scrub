@@ -6,6 +6,6 @@
     "noImplicitAny": true,
     "removeComments": true,
     "declaration": true,
-    "sourceMap": true,
+    "sourceMap": true
   }
 }

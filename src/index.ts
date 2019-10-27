@@ -11,7 +11,7 @@ interface Options {
   exclude?: string;
 }
 
-export default function scrub(options: Options = {}) {
+const scrub = (options: Options = {}) => {
   const filter = createFilter(options.include, options.exclude);
 
   if (options.tags === undefined) {
@@ -65,6 +65,8 @@ export default function scrub(options: Options = {}) {
       }
 
       return unscrubbedCode.join('\n');
-    }
+    },
   };
-}
+};
+
+export default scrub;
