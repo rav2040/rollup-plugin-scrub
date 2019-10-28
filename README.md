@@ -2,6 +2,8 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/a7725697bc994000be4fe6f4c0f6f559)](https://www.codacy.com/manual/rav2040/rollup-plugin-scrub?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=rav2040/rollup-plugin-scrub&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://travis-ci.com/rav2040/rollup-plugin-scrub.svg?branch=master)](https://travis-ci.com/rav2040/rollup-plugin-scrub)
+[![Coverage Status](https://coveralls.io/repos/github/rav2040/rollup-plugin-scrub/badge.svg?branch=master)](https://coveralls.io/github/rav2040/rollup-plugin-scrub?branch=master)
+[![Known Vulnerabilities](https://snyk.io/test/github/rav2040/rollup-plugin-scrub/badge.svg?targetFile=package.json)](https://snyk.io/test/github/rav2040/rollup-plugin-scrub?targetFile=package.json)
 
 Remove lines or sections of code based on custom-defined tags.
 
