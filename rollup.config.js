@@ -1,21 +1,17 @@
 import typescript from 'rollup-plugin-typescript2';
 
 export default {
-  input: './src/index.ts',
+  input: './src/rollup-plugin-scrub.ts',
   output: [
     {
-      file: './dist/index.js',
+      file: './lib/rollup-plugin-scrub.js',
       format: 'cjs',
     },
     {
-      file: './dist/index.mjs',
+      file: './lib/rollup-plugin-scrub.mjs',
       format: 'esm',
     },
   ],
-  external: [
-    'rollup-pluginutils',
-  ],
-  plugins: [
-    typescript(),
-  ],
+  external: ['rollup-pluginutils'],
+  plugins: [typescript()],
 };

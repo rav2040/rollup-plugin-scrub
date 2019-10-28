@@ -1,13 +1,13 @@
 {
   "name": "rollup-plugin-scrub",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Remove lines or sections of code based on custom-defined tags.",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "main": "./lib/rollup-plugin-scrub.js",
+  "module": "/lib/rollup-plugin-scrub.mjs",
   "scripts": {
-    "build": "rm -rf ./dist && rollup -c",
+    "build": "rm -rf ./lib && rollup -c",
     "pretest": "npm run build",
-    "test": "jest",
+    "test": "jest --verbose",
     "coverage": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "repository": {
@@ -33,12 +33,16 @@
     "@typescript-eslint/parser": "^2.5.0",
     "coveralls": "^3.0.7",
     "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-prettier": "^3.1.1",
     "jest": "^24.9.0",
+    "prettier": "^1.18.2",
     "rollup": "^1.25.2",
     "rollup-plugin-typescript2": "^0.24.3",
     "typescript": "^3.6.4"
   },
   "peerDependencies": {
     "rollup": "<2"
-  }
+  },
+  "typings": "./lib/rollup-plugin-scrub.d.ts"
 }

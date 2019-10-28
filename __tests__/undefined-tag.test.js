@@ -1,8 +1,7 @@
 const fs = require('fs');
 const rollup = require('rollup');
-const scrub = require('../dist/index.js');
+const scrub = require('../lib/rollup-plugin-scrub.js');
 
-// see below for details on the options
 const inputOptions = {
   input: './__tests__/input.js',
   external: [
@@ -13,16 +12,15 @@ const inputOptions = {
   ],
 };
 
-it('matches expected CommonJS output', async () => {
-  const expected = fs.readFileSync('./__tests__/expected-output/cjs/from-undefined-input.js').toString();
-  const bundle = await rollup.rollup(inputOptions);
-  const { output } = await bundle.generate({ format: 'cjs' });
-  expect(output[0].code).toEqual(expected);
-});
+const cjs = fs.readFileSync(`./__tests__/expected-output/cjs/from-undefined-input.js`).toString();
+const esm = fs.readFileSync(`./__tests__/expected-output/esm/from-undefined-input.js`).toString();
 
-it('matches expected ESM output', async () => {
-  const expected = fs.readFileSync('./__tests__/expected-output/esm/from-undefined-input.js').toString();
+test.each`
+  format   | expected
+  ${'cjs'} | ${cjs}
+  ${'esm'} | ${esm}
+`('undefined input matches expected $format output', async ({ format, expected }) => {
   const bundle = await rollup.rollup(inputOptions);
-  const { output } = await bundle.generate({ format: 'esm' });
+  const { output } = await bundle.generate({ format });
   expect(output[0].code).toEqual(expected);
 });

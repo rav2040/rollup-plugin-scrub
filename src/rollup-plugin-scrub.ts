@@ -43,9 +43,7 @@ const scrub = (options: Options = {}) => {
             scrubber.isActive = true;
             scrubber.shouldReset = end === undefined;
             break;
-          }
-
-          else if (line.trim() === `//${end}`) {
+          } else if (line.trim() === `//${end}`) {
             isTag = true;
             scrubber.isActive = false;
             scrubber.shouldReset = false;
