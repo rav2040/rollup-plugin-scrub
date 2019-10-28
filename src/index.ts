@@ -19,7 +19,7 @@ const scrub = (options: Options = {}) => {
   }
 
   if (typeof options.tags === 'string') {
-    options.tags = [options.tags];
+    options.tags = [{ begin: options.tags }];
   }
 
   const { tags } = options;

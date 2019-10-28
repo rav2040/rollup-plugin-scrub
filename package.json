@@ -6,8 +6,9 @@
   "module": "dist/index.mjs",
   "scripts": {
     "build": "rm -rf ./dist && rollup -c",
-    "pretest": "npm run build && rm -f ./test/output.*.test.js && rollup -c ./test/rollup.config.cjs.test.js && rollup -c ./test/rollup.config.esm.test.js",
-    "test": "npx ava"
+    "pretest": "npm run build",
+    "test": "jest",
+    "coverage": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -28,7 +29,11 @@
     "rollup-pluginutils": "^2.8.2"
   },
   "devDependencies": {
-    "ava": "^2.4.0",
+    "@typescript-eslint/eslint-plugin": "^2.5.0",
+    "@typescript-eslint/parser": "^2.5.0",
+    "coveralls": "^3.0.7",
+    "eslint": "^6.6.0",
+    "jest": "^24.9.0",
     "rollup": "^1.25.2",
     "rollup-plugin-typescript2": "^0.24.3",
     "typescript": "^3.6.4"
