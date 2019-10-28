@@ -22,8 +22,8 @@ const inputOptions = {
   ],
 };
 
-const cjs = fs.readFileSync(`./__tests__/expected-output/cjs/from-array-input.js`).toString();
-const esm = fs.readFileSync(`./__tests__/expected-output/esm/from-array-input.js`).toString();
+const cjs = fs.readFileSync('./__tests__/expected-output/cjs/from-array-input.js').toString();
+const esm = fs.readFileSync('./__tests__/expected-output/esm/from-array-input.js').toString();
 
 test.each`
   format   | expected
