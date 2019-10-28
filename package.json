@@ -7,7 +7,7 @@
   "scripts": {
     "build": "rm -rf ./lib && rollup -c",
     "pretest": "npm run build",
-    "test": "jest --verbose",
+    "test": "jest",
     "coverage": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "repository": {
