@@ -1,14 +1,17 @@
 import typescript from 'rollup-plugin-typescript2';
 
+const PKG_NAME = 'rollup-plugin-scrub';
+const DIST_DIR = 'dist';
+
 export default {
-  input: './src/rollup-plugin-scrub.ts',
+  input: `./src/${PKG_NAME}.ts`,
   output: [
     {
-      file: './lib/rollup-plugin-scrub.js',
+      file: `./${DIST_DIR}/${PKG_NAME}.js`,
       format: 'cjs',
     },
     {
-      file: './lib/rollup-plugin-scrub.mjs',
+      file: `./${DIST_DIR}/${PKG_NAME}.mjs`,
       format: 'esm',
     },
   ],

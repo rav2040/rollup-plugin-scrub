@@ -1,14 +1,17 @@
 {
   "name": "rollup-plugin-scrub",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "description": "Remove lines or sections of code based on custom-defined tags.",
-  "main": "./lib/rollup-plugin-scrub.js",
-  "module": "./lib/rollup-plugin-scrub.mjs",
+  "main": "./dist/rollup-plugin-scrub.js",
+  "module": "./dist/rollup-plugin-scrub.mjs",
+  "typings": "./dist/rollup-plugin-scrub.d.ts",
+  "author": "Stuart Kennedy",
+  "license": "MIT",
   "scripts": {
-    "build": "rm -rf ./lib && rollup -c",
+    "build": "rm -rf ./dist && rollup -c",
     "pretest": "npm run build",
     "test": "jest",
-    "coverage": "jest --coverage --coverageReporters=text-lcov | coveralls"
+    "test:coverage": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -19,8 +22,6 @@
     "rollup-plugin-scrub",
     "scrub"
   ],
-  "author": "Stuart Kennedy",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/rav2040/rollup-plugin-scrub/issues"
   },
@@ -33,16 +34,12 @@
     "@typescript-eslint/parser": "^2.5.0",
     "coveralls": "^3.0.7",
     "eslint": "^6.6.0",
-    "eslint-config-prettier": "^6.5.0",
-    "eslint-plugin-prettier": "^3.1.1",
     "jest": "^24.9.0",
-    "prettier": "^1.18.2",
     "rollup": "^1.25.2",
     "rollup-plugin-typescript2": "^0.24.3",
     "typescript": "^3.6.4"
   },
   "peerDependencies": {
     "rollup": "<2"
-  },
-  "typings": "./lib/rollup-plugin-scrub.d.ts"
+  }
 }
