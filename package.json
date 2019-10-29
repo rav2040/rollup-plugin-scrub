@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-scrub",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Remove lines or sections of code based on custom-defined tags.",
   "main": "./dist/rollup-plugin-scrub.js",
   "module": "./dist/rollup-plugin-scrub.mjs",
@@ -8,8 +8,8 @@
   "author": "Stuart Kennedy",
   "license": "MIT",
   "scripts": {
+    "prebuild": "npm test",
     "build": "rm -rf ./dist && rollup -c",
-    "pretest": "npm run build",
     "test": "jest",
     "test:coverage": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
@@ -30,6 +30,7 @@
     "rollup-pluginutils": "^2.8.2"
   },
   "devDependencies": {
+    "@types/jest": "^24.0.20",
     "@typescript-eslint/eslint-plugin": "^2.5.0",
     "@typescript-eslint/parser": "^2.5.0",
     "coveralls": "^3.0.7",
@@ -37,6 +38,7 @@
     "jest": "^24.9.0",
     "rollup": "^1.25.2",
     "rollup-plugin-typescript2": "^0.24.3",
+    "ts-jest": "^24.1.0",
     "typescript": "^3.6.4"
   },
   "peerDependencies": {

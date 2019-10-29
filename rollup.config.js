@@ -15,6 +15,10 @@ export default {
       format: 'esm',
     },
   ],
-  external: ['rollup-pluginutils'],
-  plugins: [typescript()],
+  external: [
+    'rollup-pluginutils',
+  ],
+  plugins: [
+    typescript(),
+  ],
 };
