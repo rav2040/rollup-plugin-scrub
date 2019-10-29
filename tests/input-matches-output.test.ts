@@ -2,6 +2,8 @@ import { readFileSync } from 'fs';
 import { rollup } from 'rollup';
 import scrub from '../src/rollup-plugin-scrub';
 
+const ROLLUP_OUTPUT_INDEX = 0;
+
 test('array input matches expected output', async () => {
   const expected = readFileSync('./examples/output/from-array-input.js').toString();
 
@@ -25,7 +27,7 @@ test('array input matches expected output', async () => {
     ],
   });
   const { output } = await bundle.generate({ format: 'esm' });
-  expect(output[0].code).toEqual(expected);
+  expect(output[ROLLUP_OUTPUT_INDEX].code).toEqual(expected);
 });
 
 test('undefined input matches expected output', async () => {
@@ -40,7 +42,7 @@ test('undefined input matches expected output', async () => {
     ],
   });
   const { output } = await bundle.generate({ format: 'esm' });
-  expect(output[0].code).toEqual(expected);
+  expect(output[ROLLUP_OUTPUT_INDEX].code).toEqual(expected);
 });
 
 test('input with \'exclude\' filter matches expected output', async () => {
@@ -68,5 +70,5 @@ test('input with \'exclude\' filter matches expected output', async () => {
     ],
   });
   const { output } = await bundle.generate({ format: 'esm' });
-  expect(output[0].code).toEqual(expected);
+  expect(output[ROLLUP_OUTPUT_INDEX].code).toEqual(expected);
 });

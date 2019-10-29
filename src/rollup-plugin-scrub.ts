@@ -11,6 +11,8 @@ interface Options {
   exclude?: string | string[];
 }
 
+const FIRST_LINE_INDEX = 0;
+
 const scrub = ({ tags, include, exclude }: Options = {}) => {
   const filter = createFilter(include, exclude);
 
@@ -38,7 +40,7 @@ const scrub = ({ tags, include, exclude }: Options = {}) => {
         // True if the current line denotes the end of code to be deleted, or if
         // the previous line denotes that only a single line should be deleted.
         const end = tags.some(({ end }) => `//${end}` === line.trim()) ||
-          i > 0 && tags.some(({ begin, end }) => {
+          i > FIRST_LINE_INDEX && tags.some(({ begin, end }) => {
             return !end && `//${begin}` === lines[i - 1].trim();
           });
 
