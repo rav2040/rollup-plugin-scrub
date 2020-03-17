@@ -1,19 +1,14 @@
 import { createFilter } from 'rollup-pluginutils';
 
-interface Tag {
-  begin: string;
-  end?: string;
-}
-
-interface Options {
-  tags?: Tag[];
-  include?: string | string[];
-  exclude?: string | string[];
+type Options = {
+  tags?: { begin: string, end?: string }[],
+  include?: string | string[],
+  exclude?: string | string[],
 }
 
 const FIRST_LINE_INDEX = 0;
 
-const scrub = ({ tags, include, exclude }: Options = {}) => {
+export default function scrub({ tags, include, exclude }: Options = {}) {
   const filter = createFilter(include, exclude);
 
   return {
@@ -67,5 +62,3 @@ const scrub = ({ tags, include, exclude }: Options = {}) => {
     },
   };
 };
-
-export default scrub;
