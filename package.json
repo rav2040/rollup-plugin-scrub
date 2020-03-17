@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-scrub",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Remove lines or sections of code based on custom-defined tags.",
   "main": "./dist/rollup-plugin-scrub.js",
   "module": "./dist/rollup-plugin-scrub.mjs",
@@ -27,19 +27,20 @@
   },
   "homepage": "https://github.com/rav2040/rollup-plugin-scrub#readme",
   "dependencies": {
+    "@types/node": "^13.9.1",
     "rollup-pluginutils": "^2.8.2"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.20",
-    "@typescript-eslint/eslint-plugin": "^2.5.0",
-    "@typescript-eslint/parser": "^2.5.0",
-    "coveralls": "^3.0.7",
-    "eslint": "^6.6.0",
-    "jest": "^24.9.0",
-    "rollup": "^1.25.2",
-    "rollup-plugin-typescript2": "^0.24.3",
-    "ts-jest": "^24.1.0",
-    "typescript": "^3.6.4"
+    "@types/jest": "^25.1.4",
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
+    "@typescript-eslint/parser": "^2.24.0",
+    "coveralls": "^3.0.9",
+    "eslint": "^6.8.0",
+    "jest": "^25.1.0",
+    "rollup": "^2.0.6",
+    "rollup-plugin-typescript2": "^0.26.0",
+    "ts-jest": "^25.2.1",
+    "typescript": "^3.8.3"
   },
   "peerDependencies": {
     "rollup": "<2"
