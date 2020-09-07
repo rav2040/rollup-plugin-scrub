@@ -9,6 +9,7 @@ export default {
     {
       file: `./${LIB_DIR}/${PKG_NAME}.js`,
       format: 'cjs',
+      exports: 'default',
     },
     {
       file: `./${LIB_DIR}/${PKG_NAME}.mjs`,
