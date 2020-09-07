@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-scrub",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Remove lines or sections of code based on custom-defined tags.",
   "main": "./lib/rollup-plugin-scrub.js",
   "module": "./lib/rollup-plugin-scrub.mjs",
